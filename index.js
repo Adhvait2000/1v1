@@ -93,16 +93,16 @@ function animate(){
 
     //Player movement
     if (keys.a.pressed && player.lastKey == 'a'){
-        player.velocity.x = -1
+        player.velocity.x = -5
     } else if (keys.d.pressed && player.lastKey == 'd') {
-        player.velocity.x = 1
+        player.velocity.x = 5
     }
 
     //Enemy movement
     if (keys.ArrowLeft.pressed && enemy.lastKey == 'ArrowLeft'){
-        enemy.velocity.x = -1
+        enemy.velocity.x = -5
     } else if (keys.ArrowRight.pressed && enemy.lastKey == 'ArrowRight') {
-        enemy.velocity.x = 1
+        enemy.velocity.x = 5
     }
 }
 
