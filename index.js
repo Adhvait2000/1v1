@@ -80,7 +80,6 @@ const keys = {
     }
 }
 
-let lastKey
 // creating animation loop so that the player and enemy stick to the bottom of the canvas and "gravity" is a factor
 function animate(){
     window.requestAnimationFrame(animate)
@@ -90,11 +89,12 @@ function animate(){
     enemy.update()
 
     player.velocity.x = 0
+    enemy.velocity.x = 0
 
     //Player movement
-    if (keys.a.pressed && lastKey == 'a'){
+    if (keys.a.pressed && player.lastKey == 'a'){
         player.velocity.x = -1
-    } else if (keys.d.pressed && lastKey == 'd') {
+    } else if (keys.d.pressed && player.lastKey == 'd') {
         player.velocity.x = 1
     }
 
@@ -115,11 +115,11 @@ window.addEventListener('keydown', (event) => {
     switch (event.key){
         case 'd':
             keys.d.pressed = true
-            lastKey = 'd'
+            player.lastKey = 'd'
             break
         case 'a':
             keys.a.pressed = true
-            lastKey = 'a'
+            player.lastKey = 'a'
             break
         case 'w':
             player.velocity.y = -10
