@@ -7,7 +7,7 @@ canvas.height = 576 //screen size
 c.fillRect(0, 0, canvas.width, canvas.height); //to differentiate the canvas from the browser background
 
 //creating gravity
-const gravity = 0.2
+const gravity = 0.7
 
 //creating an object
 class Sprite{
@@ -122,7 +122,7 @@ window.addEventListener('keydown', (event) => {
             player.lastKey = 'a'
             break
         case 'w':
-            player.velocity.y = -10
+            player.velocity.y = -20
             break
 
         //For the enemy
@@ -136,7 +136,7 @@ window.addEventListener('keydown', (event) => {
             enemy.lastKey = 'ArrowLeft'
             break
         case 'ArrowUp':
-            enemy.velocity.y = -10
+            enemy.velocity.y = -20
             break
     }
     console.log(event.key);
