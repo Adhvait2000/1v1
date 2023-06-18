@@ -19,6 +19,7 @@ class Sprite{
         this.width = 50
         this.height = 150;
         this.lastKey
+
         //attack box 
         this.attackBox = {
             position: {
@@ -256,7 +257,7 @@ window.addEventListener('keydown', (event) => {
             enemy.velocity.y = -20
             break
         case 'ArrowDown':
-            enemy.isAttacking = true
+            enemy.attack()
             break
     }
 })
